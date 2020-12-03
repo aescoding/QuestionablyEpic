@@ -134,6 +134,15 @@ export default function QELogImport(props) {
         healerNames = Object.keys(result.data.entries)
           .filter((key) => result.data.entries[key].icon === classIcon)
           .map((key) => result.data.entries[key]);
+        console.log(result.data);
+        console.log(APIHEALING +
+          reportid +
+          START +
+          starttime +
+          END +
+          endtime +
+          classSpec +
+          API2)
       })
       .catch(function (error) {
         console.log(error);
