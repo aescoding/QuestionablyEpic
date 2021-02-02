@@ -78,9 +78,9 @@ export default function WelcomeDialog(props) {
       <Dialog open={open} aria-labelledby="form-dialog-title">
         {/* <DialogTitle id="form-dialog-title">Subscribe</DialogTitle> */}
         <DialogContent>
-            <Typography variant="h3">Welcome to</Typography> 
-          <img src={logo} alt="QE Live" />
-          <Typography variant="h6">To continue please create a character!</Typography> 
+            <Typography align="center" variant="h3">Welcome to</Typography> 
+          <img style={{height: "100%", width: "100%"}} src={logo} alt="QE Live" />
+          <Typography align="center" variant="h6">To continue please create a character!</Typography> 
           {/* <DialogContentText>To subscribe to this website, please enter your email address here. We will send updates occasionally.</DialogContentText>
           <TextField autoFocus margin="dense" id="name" label="Email Address" type="email" fullWidth /> */}
         </DialogContent>
