@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./QEMainMenu.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -11,6 +11,9 @@ import ArrowForward from "@material-ui/icons/ArrowForward";
 import { Paper, Grid, Button, Typography, Tooltip } from "@material-ui/core";
 import HallOfFame from "../HallOfFame/HallOfFame";
 import MessageOfTheDay from "./MessageOftheDay";
+
+import WelcomeDialog from "../Welcome/Welcome";
+import AddNewCharDialog from "./CharacterModules/AddNewCharDialog";
 // import Changelog from "../ChangeLog/Changelog"
 
 // Warning: If a button name has to change, do it in the translation files. Consider the titles here to be ID's rather than strings.
@@ -59,6 +62,15 @@ export default function QEMainMenu(props) {
   const classes = useStyles();
   const characterCount = props.allChars.getAllChar().length;
   const patron = ["Diamond", "Gold", "Rolls Royce", "Sapphire"].includes(props.patronStatus);
+
+  /* -------------------- Character Creation Dialog States -------------------- */
+  const [open, setOpen] = React.useState( characterCount === 0 ? true : false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const oddEven = (number) => {
     if (number % 2 == 0) {
@@ -149,13 +161,22 @@ export default function QEMainMenu(props) {
                   />
                 ))
             : ""}
-          {props.allChars.getAllChar().length < 9 ? <AddNewChar allChars={props.allChars} charUpdate={props.charUpdate} charAddedSnack={props.charAddedSnack} /> : ""}
+          {props.allChars.getAllChar().length < 9 ? (
+            <AddNewChar allChars={props.allChars} charUpdate={props.charUpdate} charAddedSnack={props.charAddedSnack} open={open} setOpen={setOpen} handleClickOpen={handleClickOpen} handleClose={handleClose} />
+          ) : (
+            ""
+          )}
         </Grid>
         {/* //Disabled Changelog Button */}
         {/* <Changelog /> */}
         <p className="headers" style={{ fontSize: "12px" }}>
           QE Live 9.0 Update 21. Last Updated 24 January.
         </p>
+
+        <WelcomeDialog handleClickOpen={handleClickOpen} />
+
+        <AddNewCharDialog allChars={props.allChars} charUpdate={props.charUpdate} charAddedSnack={props.charAddedSnack} open={open} setOpen={setOpen} handleClickOpen={handleClickOpen} handleClose={handleClose} />
+
       </div>
     </div>
   );
