@@ -379,6 +379,12 @@
       "Conquest": "Eroberung"
     },
 
+    "Welcome": {
+      "WelcomeTo": "Welcome To DE",
+      "ContinueMessage": "To continue please create a character! DE",
+      "CreateCharacter": "Create Character DE"
+    },
+
     "WorldBosses": {
       "2430": "Valinor",
       "2431": "Mortanis",

@@ -385,6 +385,12 @@
       "-17": "Conquest"
     },
 
+    "Welcome": {
+      "WelcomeTo": "Welcome To",
+      "ContinueMessage": "To continue please create a character!",
+      "CreateCharacter": "Create Character"
+    },
+
     "WorldBosses": {
       "2430": "Valinor",
       "2431": "Mortanis",

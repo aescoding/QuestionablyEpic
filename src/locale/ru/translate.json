@@ -372,6 +372,12 @@
       "Conquest": "Очки завоевания"
     },
 
+    "Welcome": {
+      "WelcomeTo": "Welcome To RU",
+      "ContinueMessage": "To continue please create a character! RU",
+      "CreateCharacter": "Create Character RU"
+    },
+
     "WorldBosses": {
       "2430": "Валинор",
       "2431": "Мортанис",

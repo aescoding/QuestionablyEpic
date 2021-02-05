@@ -372,6 +372,12 @@
       "Conquest": "Points de conquête"
     },
 
+    "Welcome": {
+      "WelcomeTo": "Welcome To FR",
+      "ContinueMessage": "To continue please create a character! FR",
+      "CreateCharacter": "Create Character FR"
+    },
+
     "WorldBosses": {
       "2430": "Valinor",
       "2431": "Mortanis",

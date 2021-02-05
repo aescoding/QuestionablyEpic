@@ -373,6 +373,12 @@
       "Conquest": "征服点数"
     },
 
+    "Welcome": {
+      "WelcomeTo": "Welcome To CH",
+      "ContinueMessage": "To continue please create a character! CH",
+      "CreateCharacter": "Create Character CH"
+    },
+
     "WorldBosses": {
       "2430": "Valinor",
       "2431": "Mortanis",
